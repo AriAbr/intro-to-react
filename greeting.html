@@ -5,6 +5,7 @@
   </head>
   <body>
     <div id="app"></div>
+    <div id="screamer"></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.1.0/umd/react.development.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.1.0/umd/react-dom.development.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
@@ -20,6 +21,18 @@
       }
       ReactDOM.render(
         <Greeting />, document.getElementById('app')
+      );
+      class Scream extends React.Component {
+        render(){
+          return (
+            <div>
+              <p>AHHHHHHHHHHHH!!!!!!!!!!</p>
+            </div>
+          );
+        }
+      }
+      ReactDOM.render(
+        <Scream />, document.getElementById('screamer')
       );
     </script>
   </body>
